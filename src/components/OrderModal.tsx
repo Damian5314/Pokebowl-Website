@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './OrderModal.css';
 
 interface OrderModalProps {
@@ -25,11 +26,12 @@ const OrderModal: React.FC<OrderModalProps> = ({ isOpen, onClose }) => {
             rel="noopener noreferrer"
             className="order-button thuisbezorgd-button"
           >
-            <img
-              src="https://images.deliveryhero.io/image/talabat-th/LH_Logo-simple_2020-fa_TH.png"
-              alt="Thuisbezorgd"
-              className="order-logo"
-            />
+            <svg className="order-logo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1" y="6" width="15" height="8" stroke="#FF6B3D" strokeWidth="2"/>
+              <path d="M16 6H20L23 9V14H16V6Z" stroke="#FF6B3D" strokeWidth="2"/>
+              <circle cx="6" cy="17" r="2" stroke="#FF6B3D" strokeWidth="2"/>
+              <circle cx="18" cy="17" r="2" stroke="#FF6B3D" strokeWidth="2"/>
+            </svg>
             <span>Thuisbezorgd</span>
           </a>
 
@@ -40,12 +42,23 @@ const OrderModal: React.FC<OrderModalProps> = ({ isOpen, onClose }) => {
             className="order-button uber-button"
           >
             <img
-              src="https://d1a3f4spazzrp4.cloudfront.net/arch-frontend/1.0.0/d1a3f4spazzrp4.cloudfront.net/eats-logo-1a01872c77.svg"
+              src="https://cdn.simpleicons.org/ubereats/FFFFFF"
               alt="Uber Eats"
               className="order-logo"
             />
-            <span>UBER EATS</span>
+            <span>Uber Eats</span>
           </a>
+
+          <Link
+            to="/menu"
+            className="order-button afhalen-button"
+            onClick={onClose}
+          >
+            <svg className="order-logo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 8V6C7 3.79086 8.79086 2 11 2H13C15.2091 2 17 3.79086 17 6V8M3 8H21M5 8H19L18 20C18 21.1046 17.1046 22 16 22H8C6.89543 22 6 21.1046 6 20L5 8Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            <span>Afhalen</span>
+          </Link>
         </div>
       </div>
     </div>

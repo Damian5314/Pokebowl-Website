@@ -56,7 +56,7 @@
 
 .over-ons-image {
   position: sticky;
-  top: 2rem;
+  top: 6rem; /* Genoeg ruimte onder de header (header + padding) */
   display: flex;
   justify-content: center;
   align-items: flex-start;

@@ -98,9 +98,20 @@
   color: white;
 }
 
+.afhalen-button {
+  background: linear-gradient(135deg, #ff6b3d, #ff8f65);
+  color: white;
+  border: 2px solid #ff6b3d;
+}
+
+.afhalen-button:hover {
+  background: linear-gradient(135deg, #ff8f65, #ff6b3d);
+  box-shadow: 0 8px 25px rgba(255, 107, 61, 0.3);
+}
+
 .order-logo {
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   object-fit: contain;
 }
 

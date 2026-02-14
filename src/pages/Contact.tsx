@@ -1,6 +1,5 @@
 import React from 'react';
 import './Contact.css';
-import Link from "next/link"
 
 const Contact: React.FC = () => {
   return (
